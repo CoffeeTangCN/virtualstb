@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "EPG遥控器模拟器",
+    "version": "0.1",
+    "description": "",
+        "icons": {
+        "48": "image/chances.png",
+        "128": "image/chances.png"
+    },
+    "browser_action": {
+  	  "default_icon": "image/chances.png"
+  	},
+    "short_name": "EpgAssist",
+    "content_scripts":  [
+        {
+            "js": ["main.js"],
+            "matches": [ "http://*/*"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources" : [
+    	"remote_ctrl.js",
+        "image/chances.png","image/close.png"]
+}

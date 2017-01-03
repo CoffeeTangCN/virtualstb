@@ -40,17 +40,18 @@ var events =
 	   	   
 	   	 ];
    function createRemoteCtrlPanel(){
-		var s_width = window.screen.width;  
-		var s_height = window.screen.height;
+		var s_width = window.screen.availWidth;  
+		var s_height = window.screen.availHeight;
 		var remoteCtrlPanel = document.createElement("div");
 		remoteCtrlPanel.id="RC_MOCK";
 		var the_width = 204;
-		var the_height= s_height;
-		var left_p = s_width;
 		var top_p = 10;
+		var the_height= s_height;
+		var left_p = s_width - the_width;
   
 		remoteCtrlPanel.id="RC_MOCK";
 		remoteCtrlPanel.draggable = true;
+		remoteCtrlPanel.style.opacity = "0.6";
 		remoteCtrlPanel.style.margin="2px";
 		remoteCtrlPanel.style.width=the_width+"px";
 		remoteCtrlPanel.style.height="450px";
